@@ -417,6 +417,78 @@
                 font-size: 1.5em;
                 line-height: 1.6;
             }
+
+            /* Define the --wp--preset--color--black variable */
+:root {
+  --wp--preset--color--black: #000000;
+}
+
+/* Define the --wp--preset--font-size--small variable */
+:root {
+  --wp--preset--font-size--small: 13px;
+}
+
+/* Define the .has-black-color class */
+.has-black-color {
+  color: var(--wp--preset--color--black) !important;
+}
+
+/* Define the .has-cyan-bluish-gray-color class */
+.has-cyan-bluish-gray-color {
+  color: var(--wp--preset--color--cyan-bluish-gray) !important;
+}
+
+/* Update the CSS rules to use the :not pseudo-class instead of :where */
+body .is-layout-flow>.alignleft {
+  float: left;
+  margin-inline-start: 0;
+  margin-inline-end: 2em;
+}
+
+body .is-layout-flow>.alignright {
+  float: right;
+  margin-inline-start: 2em;
+  margin-inline-end: 0;
+}
+
+body .is-layout-flow>.aligncenter {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Update the CSS rules to use the correct class names */
+body .is-layout-constrained>.alignleft {
+  float: left;
+  margin-inline-start: 0;
+  margin-inline-end: 2em;
+}
+
+body .is-layout-constrained>.alignright {
+  float: right;
+  margin-inline-start: 2em;
+  margin-inline-end: 0;
+}
+
+body .is-layout-constrained>.aligncenter {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Update the CSS rules to use the correct CSS selector specificity */
+body .is-layout-constrained> :not(.alignleft):not(.alignright):not(.alignfull) {
+  max-width: var(--wp--style--global--content-size);
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Update the CSS rules to use the correct CSS media queries */
+@media only screen and (max-width: 760px) {
+  body .is-layout-constrained> :not(.alignleft):not(.alignright):not(.alignfull) {
+    max-width: var(--wp--style--global--content-size);
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
             
         </style>
         <link rel='stylesheet' id='push-global-css' href='http://www.katysdaisies.com/wp-content/plugins/push-global/public/css/push-global-public.css?ver=1.2.39' type='text/css' media='all' />
